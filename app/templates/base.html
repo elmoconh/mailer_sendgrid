@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <title>
+        {% block title %}Mailer App{% endblock %}
+ </title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css' )}}">
+
+
+<nav>
+    mail<b>ER</b>
+</nav>
+
+
+<section class="content">
+    <div class="top-bar">
+        <form action="" method="get">
+            <input type="text" name="search" placeholder="Quieres buscar algo?">
+        </form>
+        {% block action %}
+        
+        {% endblock %}
+    </div>
+    <header>
+        {% block header %} {% endblock %}
+    </header>
+     {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock%}
+</section>
+
+

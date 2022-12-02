@@ -6,5 +6,8 @@ instructions =[
         subject TEXT NOT NULL,
         content TEXT NOT NULL
      )""",
+    """INSERT INTO email (email, subject, content) VALUES
+    ('helmer.morales1@gmail.com', 'Helmer Morales', 'Hola mundo')"""
+
    
 ]
